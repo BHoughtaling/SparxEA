@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="467B1879-F" name="CITechnology" version="1.0" notes="CITechnology"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="CI Technology Elements" alias="Data" notes="The data related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::CIBusinessRule(UML::Requirement)" type="" description="" unit="" values="" default="Business Rule"/>
+					<Tag name="CITechnology::CIDataValidationRule(UML::Requirement)" type="" description="" unit="" values="" default="Validation Rule"/>
+					<Tag name="CITechnology::CIDataSteward(UML::Actor)" type="" description="" unit="" values="" default="Data Steward"/>
+					<Tag name="CITechnology::CISystemITContact(UML::Actor)" type="" description="" unit="" values="" default="IT Contact"/>
+					<Tag name="CITechnology::CISystemOwner(UML::Actor)" type="" description="" unit="" values="" default="System Owner"/>
+					<Tag name="CITechnology::CISystem(UML::Component)" type="" description="" unit="" values="" default="System"/>
+					<Tag name="CITechnology::CIDataConcept(UML::Class)" type="" description="" unit="" values="" default="Data Concept"/>
+					<Tag name="CITechnology::CIDataElement(UML::Class)" type="" description="" unit="" values="" default="Data Element"/>
+					<Tag name="CITechnology::CIDataAttribute(UML::Class)" type="" description="" unit="" values="" default="Data Attribute"/>
+					<Tag name="CITechnology::CIDataConnector(UML::Association)" type="" description="" unit="" values="" default="Data Connector"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CI Form Elements" alias="Paper Forms" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::CIFormAttribute(UML::Class)" type="" description="" unit="" values="" default="Form Attribute"/>
+					<Tag name="CITechnology::CIPaperForm(UML::Class)" type="" description="" unit="" values="" default="Paper Form"/>
+					<Tag name="CITechnology::CIFormConnector" type="" description="" unit="" values="" default="Form Connector"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CI Report Elements" alias="Report" notes="The report related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::CIReport(UML::Class)" type="" description="" unit="" values="" default="Report Element"/>
+					<Tag name="CITechnology::CIReportConnector(UML::Association)" type="" description="" unit="" values="" default="Report Connector"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CI Business Elements" alias="Business" notes="The business related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::CIABC1(UML::Class)" type="" description="" unit="" values="" default="ABC Level 1"/>
+					<Tag name="CITechnology::CIABC2(UML::Class)" type="" description="" unit="" values="" default="ABC Level 2"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+	</Content>
+</UMLProfile>
