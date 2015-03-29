@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="42B96FC4-5" name="CITechnology" version="1.0" notes="CITechnology"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="ARTIFACTS::Artifact" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" isAbstract="true"/>
+			<Stereotype name="CIABC1" metatype="CI_ABC1" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CIABC2" metatype="CI_ABC2" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CIBusinessRule" metatype="CI_BusinessRule" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Requirement"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CIDataAttribute" metatype="CI_DataAttribute" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Attribute" baseStereotypes="ERD::ERD_Attribute">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+						<Property name="_tagGroupings" value="Required=General;ReadOnly=General;DefaultValue=General;MasterDataElement=General;isMasterDataAttribute=General;IsUsed=General;SecurityClassification=General;UniqueID=General;ProcessAreas=General;RegulatoryImplications=General;DataSteward=General;Precision=Size;FieldLength=Size;Scale=Size;Format=Source;SystemName=Source;DataType=Source;FieldValue=Source;ExcelLoad=Source;FieldLabel=Source;SystemRef=Source;TriggersWorkflow=Workflow;WorkflowDescription=Workflow;TriggerAction=Workflow;"/>
+						<Property name="_tagGroupStates" value="Workflow=open;Size=open;Source=open;General=open;"/>
+						<Property name="_tagGroups" value="General,Size,Source,Workflow"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DataType" type="" description="" unit="" values="" default=""/>
+					<Tag name="DefaultValue" type="" description="" unit="" values="" default=""/>
+					<Tag name="ExcelLoad" type="" description="" unit="" values="" default=""/>
+					<Tag name="FieldLabel" type="" description="" unit="" values="" default=""/>
+					<Tag name="FieldLength" type="" description="" unit="" values="" default=""/>
+					<Tag name="FieldValue" type="" description="" unit="" values="" default=""/>
+					<Tag name="Format" type="enumeration" description="" unit="" values="Standard,Custom" default="Standard"/>
+					<Tag name="isMasterDataAttribute" type="boolean" description="" unit="" values="true,false" default="false"/>
+					<Tag name="IsUsed" type="boolean" description="" unit="" values="true,false" default="true"/>
+					<Tag name="MasterDataElement" type="boolean" description="" unit="" values="true,false" default="false"/>
+					<Tag name="Precision" type="" description="" unit="" values="" default=""/>
+					<Tag name="ProcessAreas" type="" description="" unit="" values="" default=""/>
+					<Tag name="ReadOnly" type="boolean" description="" unit="" values="true,false" default="false"/>
+					<Tag name="RegulatoryImplications" type="" description="" unit="" values="" default=""/>
+					<Tag name="Required" type="enumeration" description="" unit="" values="true,false,undefined" default="undefined"/>
+					<Tag name="Scale" type="" description="" unit="" values="" default=""/>
+					<Tag name="SecurityClassification" type="" description="" unit="" values="" default="Public"/>
+					<Tag name="SystemName" type="" description="" unit="" values="" default=""/>
+					<Tag name="TriggerAction" type="" description="" unit="" values="" default=""/>
+					<Tag name="TriggersWorkflow" type="boolean" description="" unit="" values="true,false" default="false"/>
+					<Tag name="UniqueID" type="" description="" unit="" values="" default=""/>
+					<Tag name="WorkflowDescription" type="" description="" unit="" values="" default=""/>
+					<Tag name="SystemRef"/>
+					<Tag name="DataSteward"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CIDataConcept" metatype="CI_DataConcept" instanceOwner="Data Concept" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CIDataConnector" metatype="CI_DataConnector" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_lineStyle" value="orthogonalS"/>
+						<Property name="compositionKind" value="none"/>
+						<Property name="direction" value="Unspecified"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="LogicalAssociationRef"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CIDataElement" metatype="CI_DataElement" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Entity" baseStereotypes="ERD::ERD_Entity">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="isMasterDataEntity" type="boolean" description="" unit="" values="true,false" default="false"/>
+					<Tag name="MasterDataElement" type="boolean" description="" unit="" values="true,false" default="false"/>
+					<Tag name="RefreshRate" type="" description="" unit="" values="" default=""/>
+					<Tag name="SecurityClassification" type="" description="" unit="" values="" default="Public"/>
+					<Tag name="SystemName" type="" description="" unit="" values="" default=""/>
+					<Tag name="DataSteward"/>
+					<Tag name="SystemRef"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CIDataSteward" metatype="CI_DataSteward" instanceOwner="Person Role" notes="" cx="80" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Actor"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CIDataValidationRule" metatype="CI_DataValidationRule" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Requirement"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CIFormAttribute" metatype="CIFormAttribute" notes="" cx="200" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Attribute" baseStereotypes="ERD::ERD_Attribute">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+						<Property name="_tagGroupings" value="Required=General;ReadOnly=General;DefaultValue=General;MasterDataElement=General;isMasterDataAttribute=General;IsUsed=General;SecurityClassification=General;UniqueID=General;ProcessAreas=General;RegulatoryImplications=General;DataSteward=General;Precision=Size;FieldLength=Size;Scale=Size;Format=Source;SystemName=Source;DataType=Source;FieldValue=Source;ExcelLoad=Source;FieldLabel=Source;SystemRef=Source;TriggersWorkflow=Workflow;WorkflowDescription=Workflow;TriggerAction=Workflow;"/>
+						<Property name="_tagGroupStates" value="Workflow=open;Size=open;Source=open;General=open;"/>
+						<Property name="_tagGroups" value="General,Size,Source,Workflow"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="ProcessAreas" type="" description="" unit="" values="" default=""/>
+					<Tag name="SystemRef"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CIFormConnector" metatype="CIFormConnector" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="compositionKind" value="none"/>
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="_linestyle" type="" description="" unit="" values="" default="direct"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CIPaperForm" metatype="CIPaperForm" notes="" cx="130" cy="50" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ARTIFACTS::Artifact" baseStereotypes="ARTIFACTS::Artifact">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="ProcessAreas" type="" description="" unit="" values="" default=""/>
+					<Tag name="SystemRef"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CIReport" metatype="CI_Report" instanceOwner="Report" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CIReportConnector" metatype="CI_ReportConnector" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_lineStyle" value="orthogonalS"/>
+						<Property name="compositionKind" value="none"/>
+						<Property name="direction" value="Unspecified"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CISystem" metatype="CI_System" instanceOwner="CI_System" notes="" cx="100" cy="100" bgcolor="14745599" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Component">
+						<Property name="_defaultDiagramType" value="CITechnology::Compassion Architecture diagram"/>
+						<Property name="_tagGroupings" value="Definition=SubjectArea;Name=SubjectArea;"/>
+						<Property name="_tagGroups" value="SubjectArea"/>
+						<Property name="isIndirectlyInstantiated" value="true"/>
+						<Property name="_tagGroupStates" value="SubjectArea=open"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Definition" type="" description="" unit="" values="" default=""/>
+					<Tag name="Name" type="" description="" unit="" values="" default=""/>
+					<Tag name="SystemCurrency" type="enumeration" description="" unit="" values="As-Is,To-Be" default="As-Is"/>
+					<Tag name="SystemLocation" type="enumeration" description="" unit="" values="GMC,Field Office,GPA Office,ICP,Cloud/Off Premise" default="GMC"/>
+					<Tag name="SystemOwner" type="" description="" unit="" values="" default=""/>
+					<Tag name="SystemType" type="enumeration" description="" unit="" values="COTS,Custom,Database,Platform" default="COTS"/>
+					<Tag name="SystemITContact"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CISystemITContact" metatype="CI_CISystemITContact" instanceOwner="Person Role" notes="" cx="80" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Actor"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CISystemOwner" metatype="CI_SystemOwner" instanceOwner="Person Role" notes="" cx="80" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Actor"/>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes>
+			<TaggedValueType property="SystemRef" description="" notes="Type=RefGUID;Stereotypes=CISystem;"/>
+			<TaggedValueType property="DataSteward" description="" notes="Type=RefGUID;Stereotypes=CIDataSteward;"/>
+			<TaggedValueType property="LogicalAssociationRef" description="" notes="Type=RefGUIDList;Stereotypes=ERD::ERD_naryAssociation;"/>
+			<TaggedValueType property="SystemITContact" description="" notes="Type=RefGUID;Stereotypes=CISystemITContact;"/>
+		</TaggedValueTypes>
+	</Content>
+</UMLProfile>
