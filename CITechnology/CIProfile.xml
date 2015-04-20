@@ -23,6 +23,31 @@
 					<Apply type="Requirement"/>
 				</AppliesTo>
 			</Stereotype>
+			<Stereotype name="CIConnectorRoleTypeA" metatype="CI_ConnectorRoleTypeA" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_lineStyle" value="orthogonalS"/>
+						<Property name="compositionKind" value="none"/>
+						<Property name="direction" value="Unspecified"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="LogicalAssociationRef"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CIConnectorRoleTypeB" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_lineStyle" value="orthogonalS"/>
+						<Property name="compositionKind" value="none"/>
+						<Property name="direction" value="Unspecified"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="_metatype = CI_ConectorRoleTypeB" type="" description="" unit="" values="" default=""/>
+					<Tag name="LogicalAssociationRef"/>
+				</TaggedValues>
+			</Stereotype>
 			<Stereotype name="CIDataAttribute" metatype="CI_DataAttribute" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Attribute" baseStereotypes="ERD::ERD_Attribute">
 				<AppliesTo>
 					<Apply type="Class">
@@ -55,8 +80,8 @@
 					<Tag name="TriggersWorkflow" type="boolean" description="" unit="" values="true,false" default="false"/>
 					<Tag name="UniqueID" type="" description="" unit="" values="" default=""/>
 					<Tag name="WorkflowDescription" type="" description="" unit="" values="" default=""/>
-					<Tag name="SystemRef"/>
 					<Tag name="DataSteward"/>
+					<Tag name="SystemRef"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="CIDataConcept" metatype="CI_DataConcept" instanceOwner="Data Concept" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -90,8 +115,8 @@
 					<Tag name="RefreshRate" type="" description="" unit="" values="" default=""/>
 					<Tag name="SecurityClassification" type="" description="" unit="" values="" default="Public"/>
 					<Tag name="SystemName" type="" description="" unit="" values="" default=""/>
-					<Tag name="DataSteward"/>
 					<Tag name="SystemRef"/>
+					<Tag name="DataSteward"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="CIDataSteward" metatype="CI_DataSteward" instanceOwner="Person Role" notes="" cx="80" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -186,11 +211,22 @@
 					<Apply type="Actor"/>
 				</AppliesTo>
 			</Stereotype>
+			<Stereotype name="CIType" metatype="CI_Type" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Entity" baseStereotypes="ERD::ERD_Entity">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="RefreshRate" type="" description="" unit="" values="" default=""/>
+					<Tag name="SystemRef"/>
+				</TaggedValues>
+			</Stereotype>
 		</Stereotypes>
 		<TaggedValueTypes>
-			<TaggedValueType property="SystemRef" description="" notes="Type=RefGUID;Stereotypes=CISystem;"/>
+			<TaggedValueType property="LogicalAssociationRef" description="" notes="Type=RefGUID;Stereotypes=ERD::ERD_naryAssociation;"/>
 			<TaggedValueType property="DataSteward" description="" notes="Type=RefGUID;Stereotypes=CIDataSteward;"/>
-			<TaggedValueType property="LogicalAssociationRef" description="" notes="Type=RefGUIDList;Stereotypes=ERD::ERD_naryAssociation;"/>
+			<TaggedValueType property="SystemRef" description="" notes="Type=RefGUID;Stereotypes=CISystem;"/>
 			<TaggedValueType property="SystemITContact" description="" notes="Type=RefGUID;Stereotypes=CISystemITContact;"/>
 		</TaggedValueTypes>
 	</Content>

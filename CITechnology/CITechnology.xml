@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<MDG.Technology version="1.0"><Documentation id="CITech" name="Compassion Technology" version="9.1.1" notes="Compassion International Technology&#xA;03/30/2015&#xA;   Reordered Forms Tools&#xA;03/10/2015&#xA;   Added CIPaperForm element&#xA;03/10/2015&#xA;   Added CIFormAttribute stereotype&#xA;03/06/2015&#xA;   Bug Fix to pick up deletes&#xA;03/04/2015&#xA;   Improved 3 existing scripts and added script &#xA;   to do Physical to Logical attribute mapping&#xA;03/03/2015&#xA;   Improved Physical Data Model Dictionary&#xA;02/25/2015&#xA;   Testing Version 12 of Sparx&#xA;02/04/2015&#xA;   Added Report: PDM_for_SFDC_Comparison - creates an unformatted spreadsheet that is then used to compare the PDM to SFDC&#xA;01/14/2015&#xA;   Added Search: CI_FindCIDataAttribute_LogicalOrhpans - helps find CIDataAttributes that do not have a relationship to a logical attribute.&#xA;   Modified: Report: Physical_Data_Dictionary_Workbook - resolved FieldValues not populating when the DataType is something other then a Picklist.&#xA;  Modified: Report: Physical_Data_Model - resolved FieldValues not populating when the DataType is something other then a Picklist. "/><UMLProfiles><UMLProfile profiletype="uml2">
+<MDG.Technology version="1.0"><Documentation id="CITech" name="Compassion Technology" version="10.01" notes="Compassion International Technology&#xA;04/20/2015&#xA;   Added RoleTypeB Connector&#xA;04/16/2015&#xA;   Added Type Elements&#xA;03/30/2015&#xA;   Reordered Forms Tools&#xA;03/10/2015&#xA;   Added CIPaperForm element&#xA;03/10/2015&#xA;   Added CIFormAttribute stereotype&#xA;03/06/2015&#xA;   Bug Fix to pick up deletes&#xA;03/04/2015&#xA;   Improved 3 existing scripts and added script &#xA;   to do Physical to Logical attribute mapping&#xA;03/03/2015&#xA;   Improved Physical Data Model Dictionary&#xA;02/25/2015&#xA;   Testing Version 12 of Sparx&#xA;02/04/2015&#xA;   Added Report: PDM_for_SFDC_Comparison - creates an unformatted spreadsheet that is then used to compare the PDM to SFDC&#xA;01/14/2015&#xA;   Added Search: CI_FindCIDataAttribute_LogicalOrhpans - helps find CIDataAttributes that do not have a relationship to a logical attribute.&#xA;   Modified: Report: Physical_Data_Dictionary_Workbook - resolved FieldValues not populating when the DataType is something other then a Picklist.&#xA;  Modified: Report: Physical_Data_Model - resolved FieldValues not populating when the DataType is something other then a Picklist. "/><UMLProfiles><UMLProfile profiletype="uml2">
 			<Documentation id="42B96FC4-5" name="CITechnology" version="1.0" notes="CITechnology"/>
 			<Content>
 				<Stereotypes>
@@ -22,6 +22,31 @@
 						<AppliesTo>
 							<Apply type="Requirement"/>
 						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="CIConnectorRoleTypeA" metatype="CI_ConnectorRoleTypeA" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="_lineStyle" value="orthogonalS"/>
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Unspecified"/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="LogicalAssociationRef"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="CIConnectorRoleTypeB" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="_lineStyle" value="orthogonalS"/>
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Unspecified"/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="_metatype = CI_ConectorRoleTypeB" type="" description="" unit="" values="" default=""/>
+							<Tag name="LogicalAssociationRef"/>
+						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="CIDataAttribute" metatype="CI_DataAttribute" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Attribute" baseStereotypes="ERD::ERD_Attribute">
 						<AppliesTo>
@@ -55,8 +80,8 @@
 							<Tag name="TriggersWorkflow" type="boolean" description="" unit="" values="true,false" default="false"/>
 							<Tag name="UniqueID" type="" description="" unit="" values="" default=""/>
 							<Tag name="WorkflowDescription" type="" description="" unit="" values="" default=""/>
-							<Tag name="SystemRef"/>
 							<Tag name="DataSteward"/>
+							<Tag name="SystemRef"/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="CIDataConcept" metatype="CI_DataConcept" instanceOwner="Data Concept" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -90,8 +115,8 @@
 							<Tag name="RefreshRate" type="" description="" unit="" values="" default=""/>
 							<Tag name="SecurityClassification" type="" description="" unit="" values="" default="Public"/>
 							<Tag name="SystemName" type="" description="" unit="" values="" default=""/>
-							<Tag name="DataSteward"/>
 							<Tag name="SystemRef"/>
+							<Tag name="DataSteward"/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="CIDataSteward" metatype="CI_DataSteward" instanceOwner="Person Role" notes="" cx="80" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -186,11 +211,22 @@
 							<Apply type="Actor"/>
 						</AppliesTo>
 					</Stereotype>
+					<Stereotype name="CIType" metatype="CI_Type" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Entity" baseStereotypes="ERD::ERD_Entity">
+						<AppliesTo>
+							<Apply type="Class">
+								<Property name="isActive" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="RefreshRate" type="" description="" unit="" values="" default=""/>
+							<Tag name="SystemRef"/>
+						</TaggedValues>
+					</Stereotype>
 				</Stereotypes>
 				<TaggedValueTypes>
-					<TaggedValueType property="SystemRef" description="" notes="Type=RefGUID;Stereotypes=CISystem;"/>
+					<TaggedValueType property="LogicalAssociationRef" description="" notes="Type=RefGUID;Stereotypes=ERD::ERD_naryAssociation;"/>
 					<TaggedValueType property="DataSteward" description="" notes="Type=RefGUID;Stereotypes=CIDataSteward;"/>
-					<TaggedValueType property="LogicalAssociationRef" description="" notes="Type=RefGUIDList;Stereotypes=ERD::ERD_naryAssociation;"/>
+					<TaggedValueType property="SystemRef" description="" notes="Type=RefGUID;Stereotypes=CISystem;"/>
 					<TaggedValueType property="SystemITContact" description="" notes="Type=RefGUID;Stereotypes=CISystemITContact;"/>
 				</TaggedValueTypes>
 			</Content>
@@ -216,10 +252,10 @@
 			</Content>
 		</UMLProfile>
 	</DiagramProfile><UIToolboxes><UMLProfile profiletype="uml2">
-			<Documentation id="7D107DED-0" name="CITechnology" version="1.0" alias="Compassion" notes="Custom elements and relationships defined by Compassion International"/>
+			<Documentation id="467B1879-F" name="CITechnology" version="1.0" notes="CITechnology"/>
 			<Content>
 				<Stereotypes>
-					<Stereotype name="CI Technology Elements" alias="Data" notes="The data related elements that can be added to a Compassion diagram." cx="436" cy="224" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="CI Technology Elements" alias="Data" notes="The data related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
@@ -230,13 +266,26 @@
 							<Tag name="CITechnology::CISystemITContact(UML::Actor)" type="" description="" unit="" values="" default="IT Contact"/>
 							<Tag name="CITechnology::CISystemOwner(UML::Actor)" type="" description="" unit="" values="" default="System Owner"/>
 							<Tag name="CITechnology::CISystem(UML::Component)" type="" description="" unit="" values="" default="System"/>
+							<Tag name="CITechnology::CIType(UML::Class)" type="" description="" unit="" values="" default="Type"/>
+							<Tag name="CITechnology::CIConnectorRoleTypeA(UML::Association)" type="" description="" unit="" values="" default="RoleTypeA"/>
+							<Tag name="CITechnology::CIConnectorRoleTypeB(UML::Association)" type="" description="" unit="" values="" default="RoleTypeB"/>
 							<Tag name="CITechnology::CIDataConcept(UML::Class)" type="" description="" unit="" values="" default="Data Concept"/>
 							<Tag name="CITechnology::CIDataElement(UML::Class)" type="" description="" unit="" values="" default="Data Element"/>
 							<Tag name="CITechnology::CIDataAttribute(UML::Class)" type="" description="" unit="" values="" default="Data Attribute"/>
 							<Tag name="CITechnology::CIDataConnector(UML::Association)" type="" description="" unit="" values="" default="Data Connector"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="CI Report Elements" alias="Report" notes="The report related elements that can be added to a Compassion diagram." cx="430" cy="104" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="CI Form Elements" alias="Paper Forms" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="CITechnology::CIPaperForm(UML::Class)" type="" description="" unit="" values="" default="Paper Form"/>
+							<Tag name="CITechnology::CIFormAttribute(UML::Class)" type="" description="" unit="" values="" default="Form Attribute"/>
+							<Tag name="CITechnology::CIFormConnector" type="" description="" unit="" values="" default="Form Connector"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="CI Report Elements" alias="Report" notes="The report related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
@@ -245,23 +294,13 @@
 							<Tag name="CITechnology::CIReportConnector(UML::Association)" type="" description="" unit="" values="" default="Report Connector"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="CI Business Elements" alias="Business" notes="The business related elements that can be added to a Compassion diagram." cx="305" cy="119" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="CI Business Elements" alias="Business" notes="The business related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="CITechnology::CIABC1(UML::Class)" type="" description="" unit="" values="" default="ABC Level 1"/>
 							<Tag name="CITechnology::CIABC2(UML::Class)" type="" description="" unit="" values="" default="ABC Level 2"/>
-						</TaggedValues>
-					</Stereotype>
-					<Stereotype name="CI Form Elements" alias="Paper Forms" notes="" cx="310" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-						<AppliesTo>
-							<Apply type="ToolboxPage"/>
-						</AppliesTo>
-						<TaggedValues>
-							<Tag name="CITechnology::CIPaperForm(UML::Class)" type="" description="" unit="" values="" default="Paper Form"/>
-							<Tag name="CITechnology::CIFormAttribute(UML::Class)" type="" description="" unit="" values="" default="Form Attribute"/>
-							<Tag name="CITechnology::CIFormConnector" type="" description="" unit="" values="" default="Form Connector"/>
 						</TaggedValues>
 					</Stereotype>
 				</Stereotypes>
