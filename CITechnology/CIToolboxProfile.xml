@@ -3,13 +3,113 @@
 	<Documentation id="467B1879-F" name="CITechnology" version="1.0" notes="CITechnology"/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="CI Technology Elements" alias="Data" notes="The data related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="What - System" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
-					<Apply type="ToolboxPage"/>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::_CIManaged(UML::Class)" type="" description="" unit="" values="" default="CI Managed"/>
+					<Tag name="CITechnology::_SaaS(UML::Class)" type="" description="" unit="" values="" default="SaaS"/>
+					<Tag name="CITechnology::_System(UML::Class)" type="" description="" unit="" values="" default="System"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="What - Technology" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::_ConsoleApp(UML::Class)" type="" description="" unit="" values="" default="Console App"/>
+					<Tag name="CITechnology::_DatabaseServer(UML::Class)" type="" description="" unit="" values="" default="Database Server"/>
+					<Tag name="CITechnology::_DesktopApp(UML::Class)" type="" description="" unit="" values="" default="Desktop App"/>
+					<Tag name="CITechnology::_Module(UML::Class)" type="" description="" unit="" values="" default="Module"/>
+					<Tag name="CITechnology::_Server(UML::Class)" type="" description="" unit="" values="" default="Server"/>
+					<Tag name="CITechnology::_ServerApp(UML::Class)" type="" description="" unit="" values="" default="Server App"/>
+					<Tag name="CITechnology::_Technology(UML::Class)" type="" description="" unit="" values="" default="Technology"/>
+					<Tag name="CITechnology::_VirtualServer(UML::Class)" type="" description="" unit="" values="" default="Virtual Server"/>
+					<Tag name="CITechnology::_WebApp(UML::Class)" type="" description="" unit="" values="" default="Web App"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="What - Tool" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::_AccessDB(UML::Class)" type="" description="" unit="" values="" default="Access DB"/>
+					<Tag name="CITechnology::_Application(UML::Class)" type="" description="" unit="" values="" default="Application"/>
+					<Tag name="CITechnology::_CSVFile(UML::Class)" type="" description="" unit="" values="" default="CSV File"/>
+					<Tag name="CITechnology::_DataFile(UML::Class)" type="" description="" unit="" values="" default="Data File"/>
+					<Tag name="CITechnology::_Database(UML::Class)" type="" description="" unit="" values="" default="Database"/>
+					<Tag name="CITechnology::_Design(UML::Class)" type="" description="" unit="" values="" default="Design"/>
+					<Tag name="CITechnology::_File(UML::Class)" type="" description="" unit="" values="" default="File"/>
+					<Tag name="CITechnology::_Folder(UML::Class)" type="" description="" unit="" values="" default="Folder"/>
+					<Tag name="CITechnology::_FTPFolder(UML::Class)" type="" description="" unit="" values="" default="FTP Folder"/>
+					<Tag name="CITechnology::_MobileApp(UML::Class)" type="" description="" unit="" values="" default="Mobile App"/>
+					<Tag name="CITechnology::_Orchestration(UML::Class)" type="" description="" unit="" values="" default="Orchestration"/>
+					<Tag name="CITechnology::_Plan(UML::Class)" type="" description="" unit="" values="" default="Plan"/>
+					<Tag name="CITechnology::_Service(UML::Class)" type="" description="" unit="" values="" default="Service"/>
+					<Tag name="CITechnology::_SharePointApp(UML::Class)" type="" description="" unit="" values="" default="SharePoint App"/>
+					<Tag name="CITechnology::_Spreadsheet(UML::Class)" type="" description="" unit="" values="" default="Spreadsheet"/>
+					<Tag name="CITechnology::_SQLServerDB(UML::Class)" type="" description="" unit="" values="" default="SQL Server DB"/>
+					<Tag name="CITechnology::_Tool(UML::Class)" type="" description="" unit="" values="" default="Tool"/>
+					<Tag name="CITechnology::_Workflow(UML::Class)" type="" description="" unit="" values="" default="Workflow"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Where - Business" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::_Area(UML::Class)" type="" description="" unit="" values="" default="Area"/>
+					<Tag name="CITechnology::_Country(UML::Class)" type="" description="" unit="" values="" default="Country"/>
+					<Tag name="CITechnology::_Office(UML::Class)" type="" description="" unit="" values="" default="Office"/>
+					<Tag name="CITechnology::_Region(UML::Class)" type="" description="" unit="" values="" default="Region"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Where - System" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::_LAN(UML::Class)" type="" description="" unit="" values="" default="LAN"/>
+					<Tag name="CITechnology::_VLAN(UML::Class)" type="" description="" unit="" values="" default="VLAN"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Where - Technology" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CITechnology::_TechnologyLocation(UML::Class)" type="" description="" unit="" values="" default="Technology Location"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="CI Technology Elements" alias="Data" notes="The data related elements that can be added to a Compassion diagram." cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="CITechnology::CIBusinessRule(UML::Requirement)" type="" description="" unit="" values="" default="Business Rule"/>
 					<Tag name="CITechnology::CIDataValidationRule(UML::Requirement)" type="" description="" unit="" values="" default="Validation Rule"/>
+					<Tag name="CITechnology::CITransformationRule(UML::Requirement)" type="" description="" unit="" values="" default="Transformation Rule"/>
 					<Tag name="CITechnology::CIDataSteward(UML::Actor)" type="" description="" unit="" values="" default="Data Steward"/>
 					<Tag name="CITechnology::CISystemITContact(UML::Actor)" type="" description="" unit="" values="" default="IT Contact"/>
 					<Tag name="CITechnology::CISystemOwner(UML::Actor)" type="" description="" unit="" values="" default="System Owner"/>
@@ -18,37 +118,48 @@
 					<Tag name="CITechnology::CIConnectorRoleTypeA(UML::Association)" type="" description="" unit="" values="" default="RoleTypeA"/>
 					<Tag name="CITechnology::CIConnectorRoleTypeB(UML::Association)" type="" description="" unit="" values="" default="RoleTypeB"/>
 					<Tag name="CITechnology::CIDataConcept(UML::Class)" type="" description="" unit="" values="" default="Data Concept"/>
+					<Tag name="CITechnology::CICommonEntity(UML::Class)" type="" description="" unit="" values="" default="Common Entity"/>
 					<Tag name="CITechnology::CIDataElement(UML::Class)" type="" description="" unit="" values="" default="Data Element"/>
 					<Tag name="CITechnology::CIDataAttribute(UML::Class)" type="" description="" unit="" values="" default="Data Attribute"/>
 					<Tag name="CITechnology::CIDataConnector(UML::Association)" type="" description="" unit="" values="" default="Data Connector"/>
+					<Tag name="IsCollapsed" type="Boolean" description="" unit="" values="True,False" default="true"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="CI Form Elements" alias="Paper Forms" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="CI Form Elements" alias="Paper Forms" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
-					<Apply type="ToolboxPage"/>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="CITechnology::CIPaperForm(UML::Class)" type="" description="" unit="" values="" default="Paper Form"/>
 					<Tag name="CITechnology::CIFormAttribute(UML::Class)" type="" description="" unit="" values="" default="Form Attribute"/>
 					<Tag name="CITechnology::CIFormConnector" type="" description="" unit="" values="" default="Form Connector"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="CI Report Elements" alias="Report" notes="The report related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="CI Report Elements" alias="Report" notes="The report related elements that can be added to a Compassion diagram." cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
-					<Apply type="ToolboxPage"/>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="CITechnology::CIReport(UML::Class)" type="" description="" unit="" values="" default="Report Element"/>
 					<Tag name="CITechnology::CIReportConnector(UML::Association)" type="" description="" unit="" values="" default="Report Connector"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="CI Business Elements" alias="Business" notes="The business related elements that can be added to a Compassion diagram." cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="CI Business Elements" alias="Business" notes="The business related elements that can be added to a Compassion diagram." cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
-					<Apply type="ToolboxPage"/>
+					<Apply type="ToolboxPage">
+						<Property name="IsCollapsed" value="true"/>
+					</Apply>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="CITechnology::CIABC1(UML::Class)" type="" description="" unit="" values="" default="ABC Level 1"/>
 					<Tag name="CITechnology::CIABC2(UML::Class)" type="" description="" unit="" values="" default="ABC Level 2"/>
+					<Tag name="IsCollapsed" type="boolean" description="" unit="" values="true,false" default="true"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

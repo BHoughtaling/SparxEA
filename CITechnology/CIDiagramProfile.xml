@@ -3,7 +3,7 @@
 	<Documentation id="76074D21-F" name="CITechnology" version="1.0" alias="Compassion" notes="Diagrams for Compassion Architecture;"/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="Compassion Architecture diagram" notes="Use this diagram to capture Compassion specific elements and relationships" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="Compassion Architecture diagram" notes="Use this diagram to capture Compassion specific elements and relationships" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Diagram_Component">
 						<Property name="alias" value="Compassion"/>

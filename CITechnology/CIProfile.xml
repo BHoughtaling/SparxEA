@@ -3,7 +3,7 @@
 	<Documentation id="42B96FC4-5" name="CITechnology" version="1.0" notes="CITechnology"/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="ARTIFACTS::Artifact" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" isAbstract="true"/>
+			<Stereotype name="ARTIFACTS::Artifact" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" isAbstract="true"/>
 			<Stereotype name="CIABC1" metatype="CI_ABC1" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Class">
@@ -18,12 +18,19 @@
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="CIBusinessRule" metatype="CI_BusinessRule" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="CIBusinessRule" metatype="CI_BusinessRule" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Requirement"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="CIConnectorRoleTypeA" metatype="CI_ConnectorRoleTypeA" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
+			<Stereotype name="CICommonEntity" metatype="CI_CommonEntity" instanceOwner="Common Entity" notes="" cx="120" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CIConnectorRoleTypeA" metatype="CI_ConnectorRoleTypeA" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_lineStyle" value="orthogonalS"/>
@@ -35,7 +42,7 @@
 					<Tag name="LogicalAssociationRef"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="CIConnectorRoleTypeB" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
+			<Stereotype name="CIConnectorRoleTypeB" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_lineStyle" value="orthogonalS"/>
@@ -91,7 +98,7 @@
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="CIDataConnector" metatype="CI_DataConnector" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
+			<Stereotype name="CIDataConnector" metatype="CI_DataConnector" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Connector" baseStereotypes="ERD::ERD_Connector">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_lineStyle" value="orthogonalS"/>
@@ -124,7 +131,7 @@
 					<Apply type="Actor"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="CIDataValidationRule" metatype="CI_DataValidationRule" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="CIDataValidationRule" metatype="CI_DataValidationRule" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Requirement"/>
 				</AppliesTo>
@@ -143,7 +150,7 @@
 					<Tag name="SystemRef"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="CIFormConnector" metatype="CIFormConnector" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="CIFormConnector" metatype="CIFormConnector" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -172,7 +179,7 @@
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="CIReportConnector" metatype="CI_ReportConnector" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="CIReportConnector" metatype="CI_ReportConnector" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_lineStyle" value="orthogonalS"/>
@@ -211,6 +218,11 @@
 					<Apply type="Actor"/>
 				</AppliesTo>
 			</Stereotype>
+			<Stereotype name="CITransformationRule" metatype="CITransformationRule" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Requirement"/>
+				</AppliesTo>
+			</Stereotype>
 			<Stereotype name="CIType" metatype="CI_Type" notes="" cx="120" cy="100" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ERD::ERD_Entity" baseStereotypes="ERD::ERD_Entity">
 				<AppliesTo>
 					<Apply type="Class">
@@ -221,6 +233,1375 @@
 					<Tag name="RefreshRate" type="" description="" unit="" values="" default=""/>
 					<Tag name="SystemRef"/>
 				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="_AccessDB" metatype="_AccessDB" notes="The element that represents the Access DB Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAZQAsACAAbgB1AGwAbAAgAGEAcwAgAEkAbgBzAHQA
+YQBuAGMAZQBfAEkARAAgACwAIAB0AF8AbwBiAGoAZQBjAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Application" metatype="_Application" notes="The element that represents the Application Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAZQAsACAAbgB1AGwAbAAgAGEAcwAgAEkAbgBzAHQA
+YQBuAGMAZQBfAEkARAAgACwAIAB0AF8AbwBiAGoAZQBjAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Area" metatype="_Area" notes="The element that represents the Area Business Location in the Where Classification of the Business Mgmt Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAPAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABIbIAAiJigAC0xwAIuNjwCipacAAJXnAACl/wD39/cA////ACAAAAAAAAAAAAIAAEN3
+d3d3d3d3dzQAACAAAAAAAAAAAAIAAEN3d3d3d3d3dzQAAIFnd3d3d3d3dhgAAJQ3d3d3d3d3
+c0kAAJgWd3d3d3d3YYkAAJlDd3d3d3d3NJkAAJmBZ3d3d3d2GJkAAJmUN3d3d3dzSZkAAJmY
+Fnd3d3dhiZkAAJmZQ3d3d3c0mZkAAJmZgWd3d3YYmZkAAJmZlDd3d3NJmZkAAJmZmBZ3d2GJ
+mZkAAJmZmUN3dzSZmZkAAJmZmYFndhiZmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAGJ16EZvp6QCZQEAAAwEAAAHABEAc3RyLmRhdFVUDQAHFTedVRU3nVUVN51V
+lVJNS8NAEH3XCv6HkFwqKNoWv60HxZt4sXdpk20s5IskFlT6330z202iFGwYdncy+95k5s1W
+eMccBQw8pPRWyHCIA3zrXjIeomY8Q4yEX0Oc4VjXiHt7HuFWGRExS7wyz5eiRxgr6rKDGeg+
+JzZChQ8suLsqhvDxQj+l/4icZ8GvkjVIJOPpM5vX/N15LresNpv3Ty5bje11QNYb7xPWHvPW
+w5TLZ/8Wa8j0mw7WPbCGfa5UxYVquOSXoRc1vGxbpeNYXsVIreiEFrKDhKukRmOc00T7Cz27
+2vafmeWd0gqy5QXU5GU6izsEmDFXjBs8cFaV3hueFZ5ZTci7mrGc0Rk+VfUA92S2Fe3OWm11
+MuTWezODRqvgF3LTdNJ68hZFtbJTo0dPcrbqCNK+AG9rwpAJyX9b5lRf5pPOyCGtdbnOUnLW
+Or+cdZ9gonO64u5q/suQtyTKWsZ1T/xE57ovelc9G/wAUEsBAhcLFAAAAAgAYnXoRm+npAJl
+AQAADAQAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABxU3nVVQSwUGAAAAAAEAAQA+
+AAAAmwEAAAAA</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_CIManaged" metatype="_CIManaged" notes="The element that represents the CI Managed Entity in the What Classification of the Architect Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0WAQAAAAAAAHYAAAAoAAAAGgAAAAoAAAABAAQAAAAAAKAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA8QEAAuMDAA4P//ABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAACAAAAAAAAAA
+AAAAAAIAAAB3dzSZmZkAAJmZmYFndhiZmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAEaF6EbOgkcLZQEAABYEAAAHABEAc3RyLmRhdFVUDQAH+1KdVftSnVX7Up1V
+lVPLTsMwEJxrkPiHKLkUqQgagRCPckG9coE7aps0VMpLSagUEP/O7LpOjMqj1cr2xp5Z7846
+DV4xR4UEPnJ6axQ4xhE+dK65v0TL/QIpMn6NcI6xjgnnYT3BrTJiYlZ4Ypx3RU8QKerKwXg6
+z4mN0eANC842ixECPNLP6T+g5Frxq2YOslNwDRjN72+3no0tY4jm/xPLZGNq9ch64XnG3FOe
++phyBKzfYBMyg76CzQHYhHWuVcWFarjiV0Iv7nnFNkvLMbyGO62iM9qSFWQcNTWKcEkbO2uE
+C0ffw/tmeuLhjFaRL++gJbPQjtwhxDOjpbhhbztmJjXmmClKaut43qnmIe7JGOL+HM1EkDxL
+Ze/HDHulwm/Iz161wZOXKJrVZEiOpfZpVxn3DfhbE5b0SO4e2FN9mzPtkkUac7k5sRvtXMmc
+T9kX6dC1o7VFyuspeqQg9sfJX/U3zt7sIr1fMO6touYXUEsBAhcLFAAAAAgARoXoRs6CRwtl
+AQAAFgQAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB/tSnVVQSwUGAAAAAAEAAQA+
+AAAAmwEAAAAA</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_CSVFile" metatype="_CSVFile" notes="The element that represents the CSV File Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_ConsoleApp" metatype="_ConsoleApp" notes="The element that represents the Console App Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAMKF6EZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAH6VOdVelTnVXpU51V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACADChehG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAH6VOdVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Country" metatype="_Country" notes="The element that represents the Country Business Location in the Where Classification of the Business Mgmt Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAPAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABIbIAAiJigAC0xwAIuNjwCipacAAJXnAACl/wD39/cA////ACAAAAAAAAAAAAIAAEN3
+d3d3d3d3dzQAACAAAAAAAAAAAAIAAEN3d3d3d3d3dzQAAIFnd3d3d3d3dhgAAJQ3d3d3d3d3
+c0kAAJgWd3d3d3d3YYkAAJlDd3d3d3d3NJkAAJmBZ3d3d3d2GJkAAJmUN3d3d3dzSZkAAJmY
+Fnd3d3dhiZkAAJmZQ3d3d3c0mZkAAJmZgWd3d3YYmZkAAJmZlDd3d3NJmZkAAJmZmBZ3d2GJ
+mZkAAJmZmUN3dzSZmZkAAJmZmYFndhiZmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIANRE6UZvp6QCZQEAAAwEAAAHABEAc3RyLmRhdFVUDQAHEjOeVRIznlUSM55V
+lVJNS8NAEH3XCv6HkFwqKNoWv60HxZt4sXdpk20s5IskFlT6330z202iFGwYdncy+95k5s1W
+eMccBQw8pPRWyHCIA3zrXjIeomY8Q4yEX0Oc4VjXiHt7HuFWGRExS7wyz5eiRxgr6rKDGeg+
+JzZChQ8suLsqhvDxQj+l/4icZ8GvkjVIJOPpM5vX/N15LresNpv3Ty5bje11QNYb7xPWHvPW
+w5TLZ/8Wa8j0mw7WPbCGfa5UxYVquOSXoRc1vGxbpeNYXsVIreiEFrKDhKukRmOc00T7Cz27
+2vafmeWd0gqy5QXU5GU6izsEmDFXjBs8cFaV3hueFZ5ZTci7mrGc0Rk+VfUA92S2Fe3OWm11
+MuTWezODRqvgF3LTdNJ68hZFtbJTo0dPcrbqCNK+AG9rwpAJyX9b5lRf5pPOyCGtdbnOUnLW
+Or+cdZ9gonO64u5q/suQtyTKWsZ1T/xE57ovelc9G/wAUEsBAhcLFAAAAAgA1ETpRm+npAJl
+AQAADAQAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABxIznlVQSwUGAAAAAAEAAQA+
+AAAAmwEAAAAA</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_DataFile" metatype="_DataFile" notes="The element that represents the Data File Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Database" metatype="_Database" notes="The element that represents the Database Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAF5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHBzKeVQcynlUHMp5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAF5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAcHMp5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_DatabaseServer" metatype="_DatabaseServer" notes="The element that represents the Database Server Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAKqG6EZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAHgVWdVYFVnVWBVZ1V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACACqhuhG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHgVWdVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Design" metatype="_Design" notes="The element that represents the Design Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAG5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHWzKeVVsynlVbMp5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAG5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAdbMp5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_DesktopApp" metatype="_DesktopApp" notes="The element that represents the Desktop App Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIADSG6EZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAHllSdVZZUnVWWVJ1V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACAA0huhG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHllSdVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_FTPFolder" metatype="_FTPFolder" notes="The element that represents the FTP Folder Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_File" metatype="_File" notes="The element that represents the File Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Folder" metatype="_Folder" notes="The element that represents the Folder Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAIZE6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHkzKeVZMynlWTMp5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAIZE6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAeTMp5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_LAN" metatype="_LAN" notes="The element that represents the System Location in the Where Classification of the Architect Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAPAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAB4gIAAnKCgAZHBwAI6PjwCmp6cAy+fnAPf39wDg//8A////ACAAAAAAAAAAAAIAAEOI
+iIiIiIiIiDQAACAAAAAAAAAAAAIAAEOIiIiIiIiIiDQAAHFoiIiIiIiIhhcAAJQ4iIiIiIiI
+g0kAAJcWiIiIiIiIYXkAAJlDiIiIiIiINJkAAJlxaIiIiIiGF5kAAJmUOIiIiIiDSZkAAJmX
+FoiIiIhheZkAAJmZQ4iIiIg0mZkAAJmZcWiIiIYXmZkAAJmZlDiIiINJmZkAAJmZlxaIiGF5
+mZkAAJmZmUOIiDSZmZkAAJmZmXFohheZmZkAAJmZmZQ4g0mZmZkAAJmZmZcWYXmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZlxF5mZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIADZF6Ub/Nbv8YwEAAAwEAAAHABEAc3RyLmRhdFVUDQAH1zOeVdcznlXXM55V
+lVJNS8NAEH3XCv6HkFwqVLSt4me9iDfxYu/SJmks5IskFlT6330z281GKdgw7O7s7nuzb2a2
+xjsWKBHDQ0ZvjRzHOMK3zhXPQzQ8z5Eg5W6Ic4x0jDm79QR3yoiIWeGVcb4UPcZEUVcdzEDn
+BbERanxgydmqGMLHC/2M/iMKriV3FTXISc7VZzSvfd16NrYMF837J5ZRY3IdkPXG+5TaE956
+mHH4zN9gYzL9NoNND2zMPNdaxaXWcMVdTC9qeflOpeUYXs2TRtEpLWQGKUfFGk1wSRt11gku
+OvXt3zfDO6OVZMsvaMjLtR/3CDBnrAS37OwndUmGGZ6pJuR5Q3xB7Jx3UvUAD2Q5Nfsjmiii
+tKB3KDNoaxX8Qm7bLJwnf1GqVnU0evQkpquMIM0P8HYmDOmQvOuYM/2ZT9ojizTW5VrLyNlo
+/wrqPsVU+3TN2Wr+y5C/lLeMm574qfb0UPQ+PVv8AFBLAQIXCxQAAAAIADZF6Ub/Nbv8YwEA
+AAwEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfXM55VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_MobileApp" metatype="_MobileApp" notes="The element that represents the Mobile App Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ4g0mZmZkAAJmZmZcWYXmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZlxF5mZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Module" metatype="_Module" notes="The element that represents the Module Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ4g0mZmZkAAJmZmZcWYXmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZlxF5mZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAJxD6UZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAHnjCeVZ4wnlWeMJ5V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACACcQ+lG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHnjCeVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Office" metatype="_Office" notes="The element that represents the Office Business Location in the Where Classification of the Business Mgmt Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAPAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABIbIAAiJigAC0xwAIuNjwCipacAAJXnAACl/wD39/cA////ACAAAAAAAAAAAAIAAEN3
+d3d3d3d3dzQAACAAAAAAAAAAAAIAAEN3d3d3d3d3dzQAAIFnd3d3d3d3dhgAAJQ3d3d3d3d3
+c0kAAJgWd3d3d3d3YYkAAJlDd3d3d3d3NJkAAJmBZ3d3d3d2GJkAAJmUN3d3d3dzSZkAAJmY
+Fnd3d3dhiZkAAJmZQ3d3d3c0mZkAAJmZgWd3d3YYmZkAAJmZlDd3d3NJmZkAAJmZmBZ3d2GJ
+mZkAAJmZmUN3dzSZmZkAAJmZmYFndhiZmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAPRE6UZvp6QCZQEAAAwEAAAHABEAc3RyLmRhdFVUDQAHTjOeVU4znlVOM55V
+lVJNS8NAEH3XCv6HkFwqKNoWv60HxZt4sXdpk20s5IskFlT6330z202iFGwYdncy+95k5s1W
+eMccBQw8pPRWyHCIA3zrXjIeomY8Q4yEX0Oc4VjXiHt7HuFWGRExS7wyz5eiRxgr6rKDGeg+
+JzZChQ8suLsqhvDxQj+l/4icZ8GvkjVIJOPpM5vX/N15LresNpv3Ty5bje11QNYb7xPWHvPW
+w5TLZ/8Wa8j0mw7WPbCGfa5UxYVquOSXoRc1vGxbpeNYXsVIreiEFrKDhKukRmOc00T7Cz27
+2vafmeWd0gqy5QXU5GU6izsEmDFXjBs8cFaV3hueFZ5ZTci7mrGc0Rk+VfUA92S2Fe3OWm11
+MuTWezODRqvgF3LTdNJ68hZFtbJTo0dPcrbqCNK+AG9rwpAJyX9b5lRf5pPOyCGtdbnOUnLW
+Or+cdZ9gonO64u5q/suQtyTKWsZ1T/xE57ovelc9G/wAUEsBAhcLFAAAAAgA9ETpRm+npAJl
+AQAADAQAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB04znlVQSwUGAAAAAAEAAQA+
+AAAAmwEAAAAA</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Orchestration" metatype="_Orchestration" notes="The element that represents the Orchestration Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Plan" metatype="_Plan" notes="The element that represents the Plan Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAKhE6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAH0DKeVdAynlXQMp5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAKhE6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfQMp5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Region" metatype="_Region" notes="The element that represents the Region Business Location in the Where Classification of the Business Mgmt Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAPAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABIbIAAiJigAC0xwAIuNjwCipacAAJXnAACl/wD39/cA////ACAAAAAAAAAAAAIAAEN3
+d3d3d3d3dzQAACAAAAAAAAAAAAIAAEN3d3d3d3d3dzQAAIFnd3d3d3d3dhgAAJQ3d3d3d3d3
+c0kAAJgWd3d3d3d3YYkAAJlDd3d3d3d3NJkAAJmBZ3d3d3d2GJkAAJmUN3d3d3dzSZkAAJmY
+Fnd3d3dhiZkAAJmZQ3d3d3c0mZkAAJmZgWd3d3YYmZkAAJmZlDd3d3NJmZkAAJmZmBZ3d2GJ
+mZkAAJmZmUN3dzSZmZkAAJmZmYFndhiZmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIABhF6UZvp6QCZQEAAAwEAAAHABEAc3RyLmRhdFVUDQAHfDOeVXwznlV8M55V
+lVJNS8NAEH3XCv6HkFwqKNoWv60HxZt4sXdpk20s5IskFlT6330z202iFGwYdncy+95k5s1W
+eMccBQw8pPRWyHCIA3zrXjIeomY8Q4yEX0Oc4VjXiHt7HuFWGRExS7wyz5eiRxgr6rKDGeg+
+JzZChQ8suLsqhvDxQj+l/4icZ8GvkjVIJOPpM5vX/N15LresNpv3Ty5bje11QNYb7xPWHvPW
+w5TLZ/8Wa8j0mw7WPbCGfa5UxYVquOSXoRc1vGxbpeNYXsVIreiEFrKDhKukRmOc00T7Cz27
+2vafmeWd0gqy5QXU5GU6izsEmDFXjBs8cFaV3hueFZ5ZTci7mrGc0Rk+VfUA92S2Fe3OWm11
+MuTWezODRqvgF3LTdNJ68hZFtbJTo0dPcrbqCNK+AG9rwpAJyX9b5lRf5pPOyCGtdbnOUnLW
+Or+cdZ9gonO64u5q/suQtyTKWsZ1T/xE57ovelc9G/wAUEsBAhcLFAAAAAgAGEXpRm+npAJl
+AQAADAQAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB3wznlVQSwUGAAAAAAEAAQA+
+AAAAmwEAAAAA</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_SQLServerDB" metatype="_SQLServerDB" notes="The element that represents the SQL Server DB Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_SaaS" metatype="_SaaS" notes="The element that represents the SaaS Entity in the What Classification of the Architect Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0WAQAAAAAAAHYAAAAoAAAAGgAAAAoAAAABAAQAAAAAAKAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA8QEAAuMDAA4P//ABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAACAAAAAAAAAA
+AAAAAAIAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAEaF6EbOgkcLZQEAABYEAAAHABEAc3RyLmRhdFVUDQAH+1KdVftSnVX7Up1V
+lVPLTsMwEJxrkPiHKLkUqQgagRCPckG9coE7aps0VMpLSagUEP/O7LpOjMqj1cr2xp5Z7846
+DV4xR4UEPnJ6axQ4xhE+dK65v0TL/QIpMn6NcI6xjgnnYT3BrTJiYlZ4Ypx3RU8QKerKwXg6
+z4mN0eANC842ixECPNLP6T+g5Frxq2YOslNwDRjN72+3no0tY4jm/xPLZGNq9ch64XnG3FOe
++phyBKzfYBMyg76CzQHYhHWuVcWFarjiV0Iv7nnFNkvLMbyGO62iM9qSFWQcNTWKcEkbO2uE
+C0ffw/tmeuLhjFaRL++gJbPQjtwhxDOjpbhhbztmJjXmmClKaut43qnmIe7JGOL+HM1EkDxL
+Ze/HDHulwm/Iz161wZOXKJrVZEiOpfZpVxn3DfhbE5b0SO4e2FN9mzPtkkUac7k5sRvtXMmc
+T9kX6dC1o7VFyuspeqQg9sfJX/U3zt7sIr1fMO6touYXUEsBAhcLFAAAAAgARoXoRs6CRwtl
+AQAAFgQAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB/tSnVVQSwUGAAAAAAEAAQA+
+AAAAmwEAAAAA</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Server" metatype="_Server" notes="The element that represents the Server Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAAJE6UZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAHgTGeVYExnlWBMZ5V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACAACROlG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHgTGeVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_ServerApp" metatype="_ServerApp" notes="The element that represents the Server App Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAAJE6UZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAHgTGeVYExnlWBMZ5V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACAACROlG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHgTGeVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Service" metatype="_Service" notes="The element that represents the Service Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_SharePointApp" metatype="_SharePointApp" notes="The element that represents the SharePoint App Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Spreadsheet" metatype="_Spreadsheet" notes="The element that represents the Spreadsheet Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_System" metatype="_System" notes="The element that represents the System Entity in the What Classification of the Architect Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0WAQAAAAAAAHYAAAAoAAAAGgAAAAoAAAABAAQAAAAAAKAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA8QEAAuMDAA4P//ABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAACAAAAAAAAAA
+AAAAAAIAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAEaF6EbOgkcLZQEAABYEAAAHABEAc3RyLmRhdFVUDQAH+1KdVftSnVX7Up1V
+lVPLTsMwEJxrkPiHKLkUqQgagRCPckG9coE7aps0VMpLSagUEP/O7LpOjMqj1cr2xp5Z7846
+DV4xR4UEPnJ6axQ4xhE+dK65v0TL/QIpMn6NcI6xjgnnYT3BrTJiYlZ4Ypx3RU8QKerKwXg6
+z4mN0eANC842ixECPNLP6T+g5Frxq2YOslNwDRjN72+3no0tY4jm/xPLZGNq9ch64XnG3FOe
++phyBKzfYBMyg76CzQHYhHWuVcWFarjiV0Iv7nnFNkvLMbyGO62iM9qSFWQcNTWKcEkbO2uE
+C0ffw/tmeuLhjFaRL++gJbPQjtwhxDOjpbhhbztmJjXmmClKaut43qnmIe7JGOL+HM1EkDxL
+Ze/HDHulwm/Iz161wZOXKJrVZEiOpfZpVxn3DfhbE5b0SO4e2FN9mzPtkkUac7k5sRvtXMmc
+T9kX6dC1o7VFyuspeqQg9sfJX/U3zt7sIr1fMO6touYXUEsBAhcLFAAAAAgARoXoRs6CRwtl
+AQAAFgQAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB/tSnVVQSwUGAAAAAAEAAQA+
+AAAAmwEAAAAA</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Technology" metatype="_Technology" notes="The element that represents the Technology Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ3c0mZmZkAAJmZmZgWYYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAAJE6UZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAHgTGeVYExnlWBMZ5V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACAACROlG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHgTGeVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_TechnologyLocation" metatype="_TechnologyLocation" notes="The element that represents the Technology Location in the Where Classification of the Engineer Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAPAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABofGgAlKCUARGlEAI2OjQCC2IIAkO6QAKWmpQD39/cA////ACAAAAAAAAAAAAIAAENm
+ZmZmZmZmZjQAACAAAAAAAAAAAAIAAENmZmZmZmZmZjQAAIFWZmZmZmZmZRgAAJQ2ZmZmZmZm
+Y0kAAJgVZmZmZmZmUYkAAJlDZmZmZmZmNJkAAJmBVmZmZmZlGJkAAJmUNmZmZmZjSZkAAJmY
+FWZmZmZRiZkAAJmZQ2ZmZmY0mZkAAJmZgVZmZmUYmZkAAJmZlDZmZmNJmZkAAJmZmBVmZlGJ
+mZkAAJmZmUNmZjSZmZkAAJmZmYFWZRiZmZkAAJmZmZQ2Y0mZmZkAAJmZmZgVUYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmXeZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAJpF6UZ+SfUxaQEAABQEAAAHABEAc3RyLmRhdFVUDQAHbTSeVW00nlVtNJ5V
+lVJNS8NAEH3XCv6HkFwqVLRWsX7Ui3gTL/YubZKmhXyRxIJK/7tvZrvZVAq2DLs7u/ve7Myb
+rbHEDCVieMjorZDjFCf40bnieYiG5zkSpNz1cYmBjiFnt57hQRkRMQu8M863ooe4UtRtB9PT
+eUZshBqfmHO2WfTh441+Rv8ZBdeSu4o5yEnO1Wc0r33deja2DBfN+yeWycbU2iPrg/cpc094
+62HC4bN+g43J9NsK1kdgY9a5UhXnquGCu5he1PLybZaWY3g1TxpFp7SQFaQclap6TRtQ2xHG
+2gPZO32P75vhXdBKsuUXNOTl2o9HBJgyVoJ7rhJ5yRuTTYIvvHINed+QV/BmyjNRP8AT2S6r
+/ZHrrV4xuc3BzKDVLNhBbtpqnCd/UtSrOjl69CSmU0iQ5id4WxOGdEredcyJ/tAX7ZVFGuty
+rWXkrLWPBfM+Z79uqP2Ys835L0P+VN4y7o7Ej7S3h6L35bPBL1BLAQIXCxQAAAAIAJpF6UZ+
+SfUxaQEAABQEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAdtNJ5VUEsFBgAAAAAB
+AAEAPgAAAJ8BAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Tool" metatype="_Tool" notes="The element that represents the Tool Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ2Y0mZmZkAAJmZmZgVUYmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZmBGJmZmZkAAJmZmZmXeZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_VLAN " metatype="_VLAN" notes="The element that represents the VLAN System Location in the Where Classification of the Architect Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAPAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAB4gIAAnKCgAZHBwAI6PjwCmp6cAy+fnAPf39wDg//8A////ACAAAAAAAAAAAAIAAEOI
+iIiIiIiIiDQAACAAAAAAAAAAAAIAAEOIiIiIiIiIiDQAAHFoiIiIiIiIhhcAAJQ4iIiIiIiI
+g0kAAJcWiIiIiIiIYXkAAJlDiIiIiIiINJkAAJlxaIiIiIiGF5kAAJmUOIiIiIiDSZkAAJmX
+FoiIiIhheZkAAJmZQ4iIiIg0mZkAAJmZcWiIiIYXmZkAAJmZlDiIiINJmZkAAJmZlxaIiGF5
+mZkAAJmZmUOIiDSZmZkAAJmZmXFohheZmZkAAJmZmZQ4g0mZmZkAAJmZmZcWYXmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZlxF5mZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAEZF6Ub/Nbv8YwEAAAwEAAAHABEAc3RyLmRhdFVUDQAHCzSeVQs0nlULNJ5V
+lVJNS8NAEH3XCv6HkFwqVLSt4me9iDfxYu/SJmks5IskFlT6330z281GKdgw7O7s7nuzb2a2
+xjsWKBHDQ0ZvjRzHOMK3zhXPQzQ8z5Eg5W6Ic4x0jDm79QR3yoiIWeGVcb4UPcZEUVcdzEDn
+BbERanxgydmqGMLHC/2M/iMKriV3FTXISc7VZzSvfd16NrYMF837J5ZRY3IdkPXG+5TaE956
+mHH4zN9gYzL9NoNND2zMPNdaxaXWcMVdTC9qeflOpeUYXs2TRtEpLWQGKUfFGk1wSRt11gku
+OvXt3zfDO6OVZMsvaMjLtR/3CDBnrAS37OwndUmGGZ6pJuR5Q3xB7Jx3UvUAD2Q5Nfsjmiii
+tKB3KDNoaxX8Qm7bLJwnf1GqVnU0evQkpquMIM0P8HYmDOmQvOuYM/2ZT9ojizTW5VrLyNlo
+/wrqPsVU+3TN2Wr+y5C/lLeMm574qfb0UPQ+PVv8AFBLAQIXCxQAAAAIAEZF6Ub/Nbv8YwEA
+AAwEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAcLNJ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_VirtualServer" metatype="_VirtualServer" notes="The element that represents the Virtual Server Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ4g0mZmZkAAJmZmZcWYXmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZlxF5mZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAM5D6UZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAHPzGeVT8xnlU/MZ5V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACADOQ+lG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHPzGeVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_WebApp" metatype="_WebApp" notes="The element that represents the Web App Technology Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAAA4QDgArLysAkO6QABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ4g0mZmZkAAJmZmZcWYXmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZlxF5mZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAAJE6UZAK3aMagEAABwEAAAHABEAc3RyLmRhdFVUDQAHgTGeVYExnlWBMZ5V
+lVPLTsMwEJxrkPiHKLkUqQjKQzzLBfXKBe5VH2laKXGiJFQKiH9ndh0nQbxaWbbX9sx6d9Yu
+scYMOSL4SGltYHCIA7zrWHB/gYr7BjESrgY4xVD7iGM3H+FOGUtiVnimnzdFj3CmqKsextNx
+RuwSJV4x5+iiGCDAE+2U9iMyzjlXBWOQHcM5oDe/vd1Zzrf0zpv/jy8bjc3VI2vK84Sxxzz1
+MWYPmL/FRmQGbQbbPbAR89yoinPVcMVVRGvZ8kwTpeNYXsmdStEJ24IZJOyFqnrBNqS257jW
+Gsi603f/ulneCVtOtryCijyj9bhHiBf6inHLWTyveWKjiVFjomjJsOZ5rcqHeCCzi+hnr2Wj
+VURPwt6NGbZ6hV+QH20mnSXvUZQryJAYM63Wd336L8FvmrCkUnJ3xx7rC51orRzStj43JXar
+9csY8zGrc0nNb3qKO6S8IdMiBbE7Tv7W3zh3cx/p/YLp3ypqfgJQSwECFwsUAAAACAACROlG
+QCt2jGoBAAAcBAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHgTGeVVBLBQYAAAAA
+AQABAD4AAACgAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="_Workflow" metatype="_Workflow" notes="The element that represents the Workflow Tool Entity in the What Classification of the Technician Perspective of the Zachman Framework. " cx="120" cy="70" bgcolor="-1" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk0mAQAAAAAAAHYAAAAoAAAAGgAAAAsAAAABAAQAAAAAALAAAAASFwAAEhcAABAAAAAAAAAA
+AAAAABAPDwAvLiwA5titABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMz
+MzMzMzMzMAAAABAAAAAAAAAAAAAAAAEAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMz
+MAAAAAMzMzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMz
+MzMzMzMzMzMzMzAAAAADMzMzMzMzMzMzMzMwAAAAAzMzMzMzMzMzMzMzMAAAAAMzMzMzMzMz
+MzMzMzAAAAAgAAAAAAAAAAAAAAACAAAAmZkAAJmZmZQ4g0mZmZkAAJmZmZcWYXmZmZkAAJmZ
+mZlDNJmZmZkAAJmZmZlxF5mZmZkAAJmZmZmVWZmZmZkAAHQALgAqACwAIAB0AF8AbwBiAGoA
+ZQBjAHQALgBPAGIAagBlAGMAdABfAEkARAAgAGEAcwAgAE8AYgBqAGUAYwB0AF8ASQBEACwA
+IAB0AF8AcABhAGMAawBhAGcAZQAuAE4AYQBtAGUAIABhAHMAIABQAGEAYwBrAGEAZwBlAE4A
+YQBtAGUAIAAsACAAdABfAG8AYgBqAGUAYwB0AF8AMQAuAE4AYQBtAGUAIABhAHMAIABDAGwA
+YQBzAHMATgBhAG0AZQAgAEYAUgBPAE0AIAAoAHQAXwBvAGIAagBlAGMAdAAgAEwARQBGAFQA
+IABKAE8ASQBOACAAdABfAG8AYgBqAGUAYwB0ACAAdABfAG8AYgBqAGUAYwB0AF8AMQAgAE8A
+TgAgAHQAXwBvAGIAagBlAGMAdAAuAEMAbABhAHMAcwBpAGYAaQBlAHIAIAA9ACAAdABfAG8A
+YgBqAGUAYwB0AF8AMQAuAE8AYgBqAGUAYwB0AF8ASQBEACkAIABJAE4ATgBFAFIAIABKAE8A
+SQBOACAAdABfAHAAYQBjAGsAYQBnAGUAIABPAE4AIAB0AF8AcABhAGMAawBhAGcAZQAuAFAA
+YQBjAGsAYQBnAGUAXwBJAEQAIAA9ACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgACAAVwBoAGUAcgBlACAAdABfAG8AYgBqAGUAYwB0AC4AUABhAGMAawBhAGcA
+ZQBfAEkARAAgAGkAbgAgACgAOAA4ADEANwApACAATwByAGQAZQByACAAYgB5ACAAdABfAG8A
+YgBqAGUAYwB0AC4AVABQAG8AcwAAAC4AUwBlAHEATgBvAAAAAAAAAAAAAAAAAAAAAAAA
+AA==</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC5E6UZoGIX6YwEAABAEAAAHABEAc3RyLmRhdFVUDQAHwzGeVcMxnlXDMZ5V
+lVPLTsMwEJxrkPiHKLkUCQRtgYpHuaBeucC9aps0VMpLSahUEP/O7KZ2XPFqZdm7dmbWu7NO
+jVfMUCKGj4zeCjmOcYQPXSueL9DwPEeClLseLnCqs8+1sye4U0ZEzBLPjPOu6D4Giho5GE/X
+GbERarxhztVk0UOAJ/oZ/UcUtCV3FXOQk5w2YDTf3m48E1tmF83/J1abTVurR9aU31PmnvCr
+jzFnwPpbbExmYCtYH4CNWedKVZyrhkvuYnqR5eXbLA2n5dU8aRSdcixYQcpZqaojDFn9gN61
+2uGOvof3reWdc5RkyytoyMu1H/cI8cJYCW5pC81jogipasOzjaod4oHoLoufI9VbfWLGEfZ+
+zNBqFO4gP232nSdvUNSqyJAcC+3Qd03c7vvbISzpjtzdscf6KifaH4Nsh8vNiF1rzwrmfIZL
+XFHnG0dlg5R3k1ukIPbHyf/0N87c7CK9XzDuraLmF1BLAQIXCxQAAAAIAC5E6UZoGIX6YwEA
+ABAEAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAfDMZ5VUEsFBgAAAAABAAEAPgAA
+AJkBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
 			</Stereotype>
 		</Stereotypes>
 		<TaggedValueTypes>
